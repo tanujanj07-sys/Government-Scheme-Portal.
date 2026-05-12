@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">🏛️ Government Schemes Portal - 60+ Schemes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Simple manifest link (use real manifest.json in production) -->
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="theme-color" content="#667eea">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="status-bar" id="statusBar">
+            <span id="onlineStatus">🟢 Online</span>
+            <span id="schemeCount">60+ Schemes Loaded</span>
+            <button id="installBtn" style="display:none;">📱 Install App</button>
+        </div>
+
+        <nav class="navbar">
+            <h1 id="navTitle">Government Schemes Portal</h1>
+            <div class="nav-controls">
+                <input type="text" id="searchInput" placeholder="🔍 Search schemes..." aria-label="Search">
+                <select id="categoryFilter">
+                    <option value="">All Categories</option>
+                    <option value="farmer">🌾 Farmers (18)</option>
+                    <option value="health">🏥 Health (12)</option>
+                    <option value="education">📚 Education (10)</option>
+                    <option value="women">👩 Women (8)</option>
+                    <option value="housing">🏠 Housing (6)</option>
+                    <option value="employment">💼 Employment (5)</option>
+                    <option value="senior">👴 Seniors (4)</option>
+                    <option value="disabled">♿ Disabled (3)</option>
+                </select>
+                <button id="voiceSearch" title="Voice Search">🎤</button>
+                <button id="darkToggle" title="Dark Mode">🌙</button>
+                <button id="langToggle" title="Change Language">EN</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="stats" class="stats hidden">
+            <div class="stat-card">
+                <span id="totalSchemes">60</span><br>
+                <span class="stat-label" data-i18n="totalSchemesLabel">Total Schemes</span>
+            </div>
+            <div class="stat-card">
+                <span id="favoritesCount">0</span><br>
+                <span class="stat-label" data-i18n="favoritesLabel">Favorites</span>
+            </div>
+            <div class="stat-card">
+                <span id="ongoingCount">55</span><br>
+                <span class="stat-label" data-i18n="ongoingLabel">Ongoing</span>
+            </div>
+        </section>
+
+        <section id="schemes-container" class="schemes-container">
+            <!-- Dynamic schemes grid -->
+        </section>
+
+        <div id="pagination" class="pagination hidden"></div>
+    </main>
+
+    <footer>
+        <p id="footerText">Made for India | Contact: support@govschemes.in</p>
+        <form id="contactForm" class="contact-form hidden">
+            <input type="text" id="contactName" placeholder="Name" required>
+            <input type="email" id="contactEmail" placeholder="Email" required>
+            <textarea id="contactMessage" placeholder="Message" required></textarea>
+            <button type="submit" id="contactSubmit">Send</button>
+        </form>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
